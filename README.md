@@ -1,7 +1,7 @@
 # SC1015MiniProjectTeam5
 
 ## About
-This project aims to provide insights into real estate pricing trends in King County, Washington. Using historical sales data, we explore the impact of various factors such as property features and location on housing prices, with a focus on assisting potential buyers like Lucas in making informed decisions.
+This project aims to provide insights into real estate pricing trends in King County, Washington. Using historical sales data, we explore the impact of various factors such as property features and location on housing prices, with a focus on assisting potential buyers like Lucas in making informed decisions. The dataset used for this project is the [House Sales in King County](https://www.kaggle.com/datasets/harlfoxem/housesalesprediction/data) from Kaggle. For more details, please walkthrough the source code below:
 
 1. [Data Exploration](https://github.com/Jumanahaseen03/SC1015MiniProjectTeam5/blob/9cd147b7f8c5d1fd51ed5bc7c5036d6df20fc4f4/Data_Exploration.ipynb)
 3. [Data Wrangling](https://github.com/Jumanahaseen03/SC1015MiniProjectTeam5/blob/9cd147b7f8c5d1fd51ed5bc7c5036d6df20fc4f4/Data_Wrangling.ipynb)
@@ -11,6 +11,7 @@ This project aims to provide insights into real estate pricing trends in King Co
 - @Jumanahaseen03 (Jumana Haseen)
 - @yichi0812 (Zhang YiChi)
 - @StarySkyCanKill (Aung Aung Pyae Phyo)
+
 ## Problem Definition
 - What are the elements that affect housing prices the most?
 - Which model would be the best to predict it?
