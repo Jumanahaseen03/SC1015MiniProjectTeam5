@@ -1,1 +1,74 @@
+<intro> 
+Hello everyone, we are team 5. I am Yi Chi and my teammates are Alvin and Jumana. Today, we will be presenting our mini project on predicting housing sale prices in King County. [CLICK]
+
+The contents that we will be going through are as follows. [CLICK]
+
+<problem formulation>
+To start off, here is a brief introduction to our problem. Currently, it is the year 2015. [CLICK]This is Lucas, a diligent and ambitious man, who has been working in a local company in Singapore for many years. For a change, he had applied for another job and surprisingly,[CLICK] his job application was successful!
+
+[CLICK]Lucas is very happy and is looking-forward to the new change in his lifestyle. [CLICK]But the biggest change is that he has to move abroad with his family to Bellevue, Washington in the United States. Hence, he has to find himself a house accommodation since he will be migrating there soon. [CLICK]But here comes the problem. Lucas is very new to this country and is unsure of the housing market there.
+
+[CLICK]With various housing options available for him, he has seeked help from our data analyst team to give him useful suggestions and recommendations in buying a suitable house at a reasonable price. 
+
+[CLICK]Thus, our objective for this project was [CLICK] to provide Lucas with valuable insights into the US housing market, particularly King County, by performing Exploratory Data analysis on a King County’s housing dataset. [CLICK]In addition, trained and tuned different machine learning models to predict a reasonable house sale price based on Lucas's requirements.
+
+<about dataset>
+
+[CLICK]The dataset that we used was one from kaggle containing data on houses sold in King County from May 2014 to May 2015. It has information like the house sale price, year it was built, various measurements of the houses etc. [CLICK]The data description of the dataset is as shown here.
+<<<<<<<<<<<<Alvin>>>>>>>>>>>>
+<EDA>
+[CLICK]Before starting on our Exploratory Data Analysis, our team conducted some secondary research. We found an article from Investopedia which mentioned that [CLICK] building age and house size were a few of the common factors affecting house prices. Additionally, since Lucas and his family are new to King County, we thought providing information on preferable locations and a suitable time period would be meaningful. [CLICK]Thus, with these questions in mind, [CLICK]we conducted our EDA using python libraries like seaborn, matplotlib and plotly.
+
+[CLICK]We first plotted a line chart to clearly see the trend of average house sale price in King County based on the year it was built from 1900 to 2015. From this chart, we found that older houses built before 1940 and newer houses built after 1982 are generally more expensive, ranging from 580 thousand to 760 thousand. Whereas, the houses built between 1940 and 1982, are relatively cheaper at a price range of 330 thousand to 560 thousand. 
+
+[CLICK]Then, we further plotted another line chart to see the trend of the average house sale price in King County based on the month it was sold. Based on the line chart above, late winter and early summer from March to July generally have more expensive house sale prices ranging from 543k to 560k. Conversely, buying houses during winter from September to February seems to be relatively cheaper ranging from 507k to 540k.
+
+[CLICK]After that, a correlation matrix between the house sale prices and the different measurements of the house was done. As can be seen, all the attributes generally have a high positive linear relationship with the house sale price. Square_feet_living and Square_feet_above have the highest correlation with price with a value of 0.70 and 0.61 respectively. This suggests that the size of living space on the ground and above ground might play a significant role in helping to predict house sale price.
+
+[CLICK]Next, for Lucus to make informed decisions on his purchase of a new house, we plotted a histogram to see the distribution of house sale prices in King County. As we can see, the distribution of the house sale prices in the King Country is positively skewed. Generally, most houses are sold at prices ranging from 100 thousand to 1.3 million and houses were frequently sold at prices ranging from 300 thousand to 400 thousand. There are very few outliers where houses are sold over 7 million.
+
+[CLICK]We also wanted to gain more knowledge on how the house sale price varies across different locations in King County. Hence this scatter map was done. When comparing it with a geographical map, the results show that the Southern part of King County seem to generally have cheaper houses while the Eastern part comparatively has more expensive houses. Lucas could consider buying houses in the Southern area where house sale prices are relatively cheaper. 
+
+[CLICK]After EDA, we moved on to clean the dataset which will serve as a foundation to our machine learning. [CLICK]The raw dataset has no null values. [CLICK]However, there were quite a few outliers present. In the real scenario, there might be cases where bigger houses might be cheaper depending on the owner. Our team would like our machine learning models to be trained to predict house sale prices for such cases as well. Therefore, we decided to keep the outliers present in house measurement variables.
+
+[CLICK]In contrast, the outliers for features such as bedrooms and bathrooms are removed since our clients are only a family of 5 and they do not require 30 bedrooms and 10 bathrooms. In addition, we removed extreme price values like houses sold at a few million dollars, helping our models to predict the house sale prices more accurately. This is the boxplot for these 3 variables before and after cleaning the dataset. [About 3 seconds buffer] [CLICK] [CLICK] [CLICK]
+
+<feature learning content>
+[CLICK]After that, with the knowledge that we gained through secondary research and EDA, we did feature engineering which comprises 3 new features: Age of the property, Number of years since last renovated and Month the house was sold.[CLICK] Further analysis was done on the new engineered features on their relationship with house sale price using correlation and boxplots. All three new features do not have a strong relationship with the house price. However, Age of the property and the number of years since it was last renovated still proved to be useful information to be kept.[CLICK] Hence, just the months column was removed for the final dataset.
+<<<<<<<<<<<<<Jumana>>>>>>>>>>>
+<machine learning> 
+[CLICK]Moving onto machine learning, we used 4 different models from sklearn library: Linear Regression, Support Vector Regressor, Decision Tree Regressor and Random Forest Regressor. [CLICK]We started off with data scaling on both predictor and target variables which creates a fair playing field for all features in the dataset and allows our machine learning models to learn more effectively.
+
+[CLICK]The Linear Regression model gives a training accuracy score of around 0.708 and testing accuracy score of around 0.697.
+
+[CLICK]The Support Vector Regressor model gives a training accuracy score of 0.848 and testing accuracy score of 0.808.
+
+[CLICK]The Decision Tree Regressor model gives a training accuracy score of 0.999 and testing accuracy score of 0.719.
+
+[CLICK]The Random Forest Regressor model gives a training accuracy score of 0.972 and testing accuracy score of 0.845.
+
+[CLICK]To find out the better performing models, various metrics were used which comprises R-squared, Mean squared error and Mean absolute percentage error. R-squared describes how well the regression line fits the data, with a value closer to 1 indicating a better fit. Mean Squared Error measures the average squared difference between predicted and actual house prices. Mean Absolute Percentage Error expresses the average difference between predicted and actual prices as a percentage of the actual price, making it useful for interpreting errors relative to the house price scale.
+
+[CLICK]SVR and Random Forest seem to be the better models with higher accuracy score while having lower error scores for MSE and MAPE as shown on the table. Thus, further analysis was done for these 2 models. 
+
+[CLICK]To find out the best model out of the two, we checked for overfitting of the models. As can be seen, both models have lower training error than testing error, which means the models are performing not that well on unseen data.
+
+Thus, both seem to be slightly overfit with Random Forest being slightly more than SVR. However, since random forest has overall much lower training and testing error, it was taken as the best model out of the two.
+
+[CLICK]Further hyperparameter tuning with validation sets were done on random forest to improve its performance while reducing overfitting by finding a model configuration that performs well on unseen data. We used RandomSearchCV to tune the model with cv folds of 3. Based on the above results, the random Forest Regressor model has a high accuracy score of 0.86 and 0.87 on validation and testing sets respectively. In addition, the model also has a low mean squared error of 0.15 and 0.13 on validation and testing sets respectively. 
+
+The close proximity between the validation and testing set metrics suggests that the model has generalised well avoiding significant overfitting. [CLICK]Thus, given the good performance on both validation and testing sets, the Random Forest Regressor model can be used to predict the house sale price in King County effectively.
+
+
+<<<<<<<<<<<<<<<<<<<<<<<YiChi>>>>>>>>>>>>>>>>>>>
+<insights and recommendations>
+
+[CLICK]With the use of feature importance, we found these 10 features as shown to be crucial in predicting the house sale price using our best trained model. The location, house size, house architecture and building age seem to be some of the important factors to predicting house sale price. 
+
+[CLICK]In summary, Lucas and his family could consider looking for houses in the Southern part of King County so as to find cheaper housing options. [CLICK]He could expect an estimated housing price of $373818.01 based on the requirements he had. Based on the houses sold last year (May 2014 to May 2015), houses sold during March to July were generally cheaper. Hence, although this factor is not guaranteed to have any impact on house sale price, Lucas could take into consideration this pattern noticed from last year's house purchases. [CLICK]Lucas should take note that the location, house size and house architecture conditions are some of the key factors that affect house sale price in King County. Thus, if he wants to explore more expensive or cheaper options, he should vary his preferences for these factors. 
+
+[CLICK]This concludes our presentation. Thank you.
+
+
+
 
