@@ -8,9 +8,9 @@ This project aims to provide insights into real estate pricing trends in King Co
 4. [Machine Learning](https://github.com/Jumanahaseen03/SC1015MiniProjectTeam5/blob/9cd147b7f8c5d1fd51ed5bc7c5036d6df20fc4f4/Machine_Learning.ipynb)
 
 ## Contributors
-- @Jumanahaseen03
-- @yichi0812
-- @StarySkyCanKill
+- @Jumanahaseen03(JAHANGEER JUMANA HASEEN)
+- @yichi0812(Zhang YiChi)
+- @StarySkyCanKill(AUNG AUNG PYAE PHYO)
 ## Problem Definition
 - What are the elements that affect housing prices the most?
 - Which model would be the best to predict it?
