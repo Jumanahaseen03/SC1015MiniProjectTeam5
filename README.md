@@ -20,7 +20,7 @@ This project aims to provide insights into real estate pricing trends in King Co
 3. Decision Tree Regressor
 4. Random Forest Regressor
    
-## Conclusion
+## New Takeaways from the project
 - Visualisation tool: Plotly
 - Scaling of data using StandardScaler
 - Machine learning regression models: Support Vector Regressor (SVR), Random Forest Regressor
